@@ -1,5 +1,6 @@
-강의자료/
+.gitignore
+.DS_Store
 .vscode/
 .idea/
-.ipynb.ckeckpoints/
-.DS_Store
+.ipynb_checkpoints/
+강의자료/
