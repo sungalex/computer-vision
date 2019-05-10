@@ -29,7 +29,7 @@ img_bg = cv2.bitwise_and(roi, roi, mask = mask_inv)   # logo 부분이 비어있
 img_add = cv2.add(img_bg, logo_fg)
 np.copyto(roi, img_add)    # 원래의 roi의 reference는 변경하지 않고, roi의 값만 img_add의 값으로 대체함
 # python은 기본적으로 변수가 value가 아닌, reference로 동작함 (np.copy의 경우 새로운 reference를 생성함)
-# 아래 코드는 roi라는 이름으로 새로운 reference 변수가 생성되어, img_target의 값은 변경되지 않음
+# 아래 코드는 roi라는 이름으로 새로운 reference 변수가 생성되어, rot를 변경해도 img_target의 값은 변경되지 않음
 # roi = cv2.add(img_bg, logo_fg)
 
 # 출력하기
