@@ -13,13 +13,17 @@ fourcc = cv2.VideoWriter_fourcc(*'XVID')    # XVID 코덱 사용 : (*'XVID')는 
 # fourcc = cv2.VideoWriter_fourcc(*'DX50')    # DX50 코덱 사용
 # fourcc = cv2.VideoWriter_fourcc(*'H260')    # H260 코덱 사용(코덱이 설치되지 않은 경우 에러가 발생함) => 설치 해야 함
 writer = cv2.VideoWriter('capture.avi', fourcc, fps, (width, height))
+
+# fourcc = cv2.VideoWriter_fourcc(*'mp4v')      # lower case
+# writer = cv2.VideoWriter('capture.mp4', fourcc, fps, (width, height))
+
 cv2.namedWindow('frame', cv2.WINDOW_NORMAL)
 
 while True:
     _, frame = capture.read()
     writer.write(frame)
     cv2.imshow('frame', frame)
-    if cv2.waitKey(1) == 27: break   # waitKey(1)은 최소 1ms를 대기한다는 의미(1ms 이상)
+    if cv2.waitKey(1) & 0xff == 27: break   # waitKey(1)은 최소 1ms를 대기한다는 의미(1ms 이상)
     
 capture.release()
 writer.release()
