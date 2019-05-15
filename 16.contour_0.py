@@ -18,13 +18,21 @@ contours, _ = cv2.findContours(img_thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 # for c in contours:
 #     print(c.shape, c.dtype, cv2.contourArea(c))   # c.shape : (점의 갯수, 1, (x,y))
 
-# print(contours[0][100][0][0], contours[0][100][0][1])    # 첫번째 contour의 101번째 x, y 좌표
+# 심플한 contour (점이 최소로 만들어짐)
+# contours, _ = cv2.findContours(img_thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)   # RETR: retrieval, APPROX: Aproximation(근사)
+
+# print(contours[0][2][0][0], contours[0][2][0][1])    # 첫번째 contour의 3번째(index 2)의 x, y 좌표
 
 color = [(0,255,0), (0,0,255)]
+# for idx, contour in enumerate(contours):
+#     for point in contour:
+#         x, y = point[0][0], point[0][1]
+#         cv2.circle(img, (x,y), 3, color[idx], -1)
+
+# cv2.drawContours(img, contours, -1, (0,0,255), 3)
+
 for idx, contour in enumerate(contours):
-    for point in contour:
-        x, y = point[0][0], point[0][1]
-        cv2.circle(img, (x,y), 1, color[idx], -1)
+    cv2.drawContours(img, contours, idx, color[idx], 3)
 
 cv2.imshow("img", img)
 cv2.imshow("img_gray", img_gray)
