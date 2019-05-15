@@ -1,14 +1,18 @@
 # Python OpenCV study
 
-1. image read, show
-1. window
-1. mouse event
-1. image write
-1. pixel access
-1. arithmetic operations
-1. bitwise operations
-1. drawing
-1. video capture
-1. contrast
-1. color space
-1. object tracking
+1. image read
+2. image show
+3. window
+4. mouse event
+5. image create
+6. image write
+7. pixel access
+8. arithmetic operations
+9. bitwise operations
+10. drawing
+11. video capture
+12. contrast
+13. color space (object tracking)
+14. histogram
+15. histogram equalization
+16. contour
