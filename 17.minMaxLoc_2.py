@@ -36,9 +36,10 @@ def minMaxFilter(img, kernel_size, flag):
     else:
         return None
 
+# img = cv.imread('image/min_max.jpg', cv.IMREAD_GRAYSCALE)
 img = cv.imread('image/min_max.jpg', cv.IMREAD_COLOR)
-minFiltered = minMaxFilter(img, 7, 0)
-maxFiltered = minMaxFilter(img, 7, 1)
+minFiltered = minMaxFilter(img, 5, 0)
+maxFiltered = minMaxFilter(img, 5, 1)
 
 cv.imshow('img', img)
 cv.imshow('minFiltered', minFiltered)
