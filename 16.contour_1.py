@@ -11,16 +11,14 @@ for i in range(30): capture.read()    # 처음 2장의 이미지는 버림
 _, img0 = capture.read()
 
 img = img0.copy()
-x0, y0 = -1, -1
 pts = []
 
 def on_mouse(enent, x, y, flags, param):
-    global x0, y0, img
+    global img
     if enent == cv2.EVENT_LBUTTONDOWN:
+        if len(pts) > 0:
+           cv2.line(img, (pts[-1][0], pts[-1][1]), (x,y), (0,0,255))
         pts.append([x,y])
-        if (x0,y0) != (-1,-1):
-            cv2.line(img, (x0,y0), (x,y), (0,0,255))
-        x0, y0 = x, y
 
 cv2.namedWindow('img', cv2.WINDOW_NORMAL)
 cv2.setMouseCallback('img', on_mouse)
