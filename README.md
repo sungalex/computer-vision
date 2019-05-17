@@ -16,3 +16,5 @@
 14. histogram
 15. histogram equalization
 16. contour
+17. minMaxLoc
+18. convolution
