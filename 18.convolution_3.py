@@ -1,4 +1,4 @@
-# convolution 구현 : 같의 위치의 원소끼리 곱한 후 모두 합하기(scala 값)
+# convolution 직접 구현 : 같의 위치의 원소끼리 곱한 후 모두 합하기(scala 값)
 import numpy as np
 
 mat0 = np.array([[0,1,0],[1,2,1],[0,1,0]])

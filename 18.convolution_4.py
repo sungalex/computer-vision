@@ -1,4 +1,4 @@
-# filtering function 직접 구현하기 => color image 부분 수정 필요, sharpen filter 검토/확인 필요
+# filtering function 직접 구현하기 => csharpen filter 적용 시 오류 수정 필요
 import cv2 as cv
 import numpy as np
 
@@ -33,26 +33,21 @@ def filter_gray(img, kernel, border_type):
 def filter(img, kernel, border_type):
     if len(img.shape) == 2:
         return filter_gray(img, kernel, border_type)
-    elif len(img.shape) == 3:    # 컬러 이미지 부분 수정 필요(cv.filter2D 소스 참조)
-        hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
-        h, s, v = cv.split(hsv)
-        filtered_v = filter_gray(v, kernel, border_type)   # color를 변화 시키지 않기 위해 value 만 filter 처리
-        filtered_hsv = cv.merge((h,s,filtered_v))
-        filtered_bgr = cv.cvtColor(filtered_hsv, cv.COLOR_HSV2BGR)
-        # b, g, r = cv.split(img)
-        # filtered_b = filter_gray(b, kernel, border_type)
-        # filtered_g = filter_gray(g, kernel, border_type)
-        # filtered_r = filter_gray(r, kernel, border_type)
-        # filtered_bgr = cv.merge((filtered_b, filtered_g, filtered_r))
+    elif len(img.shape) == 3:
+        b, g, r = cv.split(img)
+        filtered_b = filter_gray(b, kernel, border_type)
+        filtered_g = filter_gray(g, kernel, border_type)
+        filtered_r = filter_gray(r, kernel, border_type)
+        filtered_bgr = cv.merge((filtered_b, filtered_g, filtered_r))
         return filtered_bgr
     else:
         return None
 
-img = cv.imread('image/filter_blur.jpg', cv.IMREAD_GRAYSCALE)
-# img = cv.imread('image/filter_blur.jpg', cv.IMREAD_COLOR)
+# img = cv.imread('image/filter_blur.jpg', cv.IMREAD_GRAYSCALE)
+img = cv.imread('image/filter_blur.jpg', cv.IMREAD_COLOR)
 # print(img.shape)
 
-kernel_size = 5   # 홀수 값 지정
+kernel_size = 3   # 홀수 값 지정
 
 # bluring filter (주변 값의 평균값으로 대체)
 # kernel_b = np.full((3,3), 1./9)  # if kernel_size is 3
@@ -61,13 +56,14 @@ filtered_b = filter(img, kernel_b, 1)
 
 # sharpening filter
 # 더 선명한 이미지로 변경하기 위해서는 주변 값에는 filter를 minus 값을 할당하고, 중심값에는 filter를 plus 값을 할당
-# 중심값은 필터의 전체 합이 1이상 되게 설정하면 Sharpening 한 이미지가 됨
+# 중심값은 필터의 전체 합이 1이 되게 설정하면 Sharpening 한 이미지가 됨
 # 필터 연산을 수행하면, 주변 값이 더 크면 중심의 값이 작아지고, 주변 값이 더 작으면 중심의 값이 더 커짐
-kernel_s = np.array([[0,-1,0],
-                     [-1,5,-1],
-                     [0,-1,0]])
+kernel_s = np.array([[-1,-1,-1],
+                     [-1,9,-1],
+                     [-1,-1,-1]])
 # kernel_s = np.full((kernel_size,kernel_size), -1)
 # kernel_s[kernel_size//2,kernel_size//2] = kernel_size*kernel_size
+# filtered_s = cv.filter2D(img, -1, kernel_s)
 filtered_s = filter(img, kernel_s, 1)
 
 cv.imshow('original', img)
