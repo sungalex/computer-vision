@@ -18,3 +18,15 @@
 16. contour
 17. minMaxLoc
 18. convolution
+19. filter2D
+20. track bar
+21. smoothing
+22. sharpening
+23. Canny
+24. NonPhotorealistic Rendering
+25. oil painting effect
+26. erode
+27. dilate
+28. optical flow
+29. face detection
+30. object tracking
