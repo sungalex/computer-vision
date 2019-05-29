@@ -1,4 +1,6 @@
-# Python OpenCV study
+# Image Processing
+
+## Python OpenCV Study
 
 1. image read
 2. image show
@@ -30,3 +32,7 @@
 28. optical flow
 29. face detection
 30. object tracking
+
+## Computer Vision Project : deep learning & keras
+
+1. GPU 환경설정, 패키지 설치
