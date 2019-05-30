@@ -1,4 +1,4 @@
-# Image Processing
+# Computer Vision
 
 ## Python OpenCV Study
 
@@ -36,3 +36,4 @@
 ## Computer Vision Project : deep learning & keras
 
 1. GPU 환경설정, 패키지 설치
+2. keras Sequential Model
