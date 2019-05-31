@@ -38,3 +38,5 @@
 1. GPU 환경설정, 패키지 설치 ([link](computer_vision_project.md))
 2. keras Sequential Model
 3. keras Functional Model
+4. intermediate layers
+5. model weights 확인/변경
