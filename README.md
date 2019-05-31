@@ -1,6 +1,6 @@
-# Image Processing
+# Computer Vision
 
-## Python OpenCV Study
+## Python OpenCV Study ([link](./opencv/))
 
 1. image read
 2. image show
@@ -33,6 +33,7 @@
 29. face detection
 30. object tracking
 
-## Computer Vision Project : deep learning & keras
+## Computer Vision Project : deep learning & keras ([link](./keras/))
 
-1. GPU 환경설정, 패키지 설치
+1. GPU 환경설정, 패키지 설치 ([link](computer_vision_project.md))
+2. keras Sequential Model
