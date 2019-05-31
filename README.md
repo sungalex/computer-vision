@@ -33,7 +33,8 @@
 29. face detection
 30. object tracking
 
-## Computer Vision Project : deep learning & keras ([link](./keras/))
+## Deep Learning & Keras ([link](./keras/))
 
 1. GPU 환경설정, 패키지 설치 ([link](computer_vision_project.md))
 2. keras Sequential Model
+3. keras Functional Model
