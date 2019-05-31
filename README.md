@@ -35,5 +35,5 @@
 
 ## Computer Vision Project : deep learning & keras ([link](./keras/))
 
-1. GPU 환경설정, 패키지 설치
+1. GPU 환경설정, 패키지 설치 ([link](computer_vision_project.md))
 2. keras Sequential Model
