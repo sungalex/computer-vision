@@ -9,7 +9,7 @@
 
 ## python & package 설치
 
-- windsows에 python 설치하고 가상환경 만들기
+- windsows에 python 설치하고 가상환경 만들기 : [Python Download](https://www.python.org/downloads/)
   - pip install virtualenv
   - virtualenv computer-vision
 - 가상환경 활성화 하기(windows) : computer-vision/Sctipts/activate
