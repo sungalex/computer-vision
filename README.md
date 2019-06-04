@@ -40,5 +40,5 @@
 03. keras Functional Model
 04. intermediate layers
 05. model weights 확인/변경
-06. history property
+06. history plot
 07. activation function
