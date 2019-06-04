@@ -1,4 +1,4 @@
-.gitignore
+./.gitignore
 .DS_Store
 .vscode/
 .idea/
@@ -6,3 +6,4 @@
 opencv/capture.avi
 opencv/image/capture.avi
 강의자료/
+RF_analysis/
