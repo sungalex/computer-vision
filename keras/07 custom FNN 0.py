@@ -1,4 +1,5 @@
 # one neuron without activation (Feed-forward Neural Network)
+
 # for one sample (x, y)
 # s = wx + b
 # e = (s-y)^2
@@ -7,6 +8,7 @@
 
 # for batch samples
 # (grad_w, grad_b) = average(de/dw, de/db) over samples in batch
+# because loss function for the batch is the average of the loss of each sample
 
 # update
 # w -= grad_w * learning_rate
