@@ -25,3 +25,12 @@
 - PCL(Point Cloud Library): 3차원 이미지 처리 라이브러리
 - 3 depth camera & Vendor 제공 S/W
   - polygon model, registration, point cloud, surface reconstruction, polygon mesh
+
+## PCL
+
+### PCL 환경설정
+
+- Microsoft Visual Studio 2015 comunity 설치
+- PCL 라이브러리 설치: C:\Library
+- 환경변수(Path) 설정: PCL 라이브러리 아래의 bin 폴더를 전부 path에 추가
+- 프로젝트 생성 > 프로젝트 Property > add > "PropertySheet-Release-64.props"
