@@ -42,3 +42,4 @@
 05. model weights 확인/변경
 06. history plot
 07. activation function
+08. Point Cloud Libray 를 사용한 3 차원 영상 처리 ([개요](3D_image_processing.md)) ([link](./pcl_lectures/))
