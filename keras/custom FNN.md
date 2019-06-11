@@ -49,3 +49,17 @@
 - forward 계산을 위한 propagate_forward() 함수를 정의 한다.
 
 ## Custom FNN 구현(with activation) ([code](07%20custom%20FNN%201.py))
+
+## 다층 FNN
+
+- Back Propagation
+
+![FNN5](./img/FNN5.jpg)
+
+![FNN6](./img/FNN6.jpg)
+
+![FNN7](./img/FNN7.jpg)
+
+![bias_matrix](./img/bias_matrix.jpg)
+
+## 다층 FNN 구현 ([code](07%20custom%20FNN%202.py))

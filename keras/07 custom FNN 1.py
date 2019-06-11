@@ -4,14 +4,16 @@ import matplotlib.pyplot as plt
 # x_train = np.random.rand(1024, 1)
 x_train = np.random.rand(1024)
 # linear function 에 activation function 을 추가하기 위해 y 값의 변위로 -1 ~ 1 이내로 제한
-y_train = x_train * 0.1 - 0.05
+# y_train = x_train * 0.1 - 0.05
+y_train = x_train ** 2 + 1
 
 x_val = np.random.rand(32)
-y_val = x_val * 0.1 - 0.05
+# y_val = x_val * 0.1 - 0.05
+y_val = x_val ** 2 + 1
 
 x_test = np.array([[0.0], [0.2], [0.4], [0.6], [0.8], [1.0]])
-y_test = x_test * 0.1 - 0.05
-
+# y_test = x_test * 0.1 - 0.05
+y_test = x_test ** 2 + 1
 
 class FNN:
 
@@ -28,7 +30,7 @@ class FNN:
         return 1 - np.tanh(x) ** 2
 
     def calc_sum(self, w, b, input):
-        return w * input + b
+        return w * input ** 2 + b
 
     def propagate_forward(self, x):
         s = self.calc_sum(self.w, self.b, x)
@@ -54,7 +56,7 @@ class FNN:
         # 기울기 평균
         for i in range(batch_size):
             grad_b = self.f_deriv(s[i]) * 2 * (o[i]-y[i])
-            grad_w = x[i] * grad_b
+            grad_w = x[i] ** 2 * grad_b
             grad_sum_b += grad_b
             grad_sum_w += grad_w
 
