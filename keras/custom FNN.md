@@ -12,7 +12,7 @@
 
 - N개의 입력(배치)에 대한 Loss 는 각각의 입력에 대한 Loss 의 평균으로 계산할 수 있다.
 
-## Custom FNN 구현(without activation) ([code](./07 custom FNN 0.py))
+## Custom FNN 구현(without activation) ([code](07%20custom%20FNN%200.py))
 
 ### for one sample (x, y)
 
@@ -44,8 +44,8 @@
 ![function_definition](./img/fnn_function_definition.jpg)
 
 - activation function 을 tanh 를 이용한다. ( np.tanh() 이용 )
-    - f(s) = tanh(s)
-    - $f\prime(s) = 1 - tanh^2(s)$
+  - f(s) = tanh(s)
+  - $f\prime(s) = 1 - tanh^2(s)$
 - forward 계산을 위한 propagate_forward() 함수를 정의 한다.
 
-## Custom FNN 구현(with activation) ([code](./07 custom FNN 1.py))
+## Custom FNN 구현(with activation) ([code](07%20custom%20FNN%201.py))
