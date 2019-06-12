@@ -63,3 +63,13 @@
 ![bias_matrix](./img/bias_matrix.jpg)
 
 ## 다층 FNN 구현 ([code](07%20custom%20FNN%202.py))
+
+![code1](./img/fnn_code1.jpg)
+
+![code2](./img/fnn_code2.jpg)
+
+## multi node multi layer
+
+![multi1](./img/multi1.jpg)
+
+![multi2](./img/multi2.jpg)
